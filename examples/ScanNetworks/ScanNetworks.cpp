@@ -10,8 +10,10 @@
  * for configuring the max of network you can display.
  */
 
+#include <WSerial.h>
 #include <SPI.h>
 #include <WiFiST.h>
+
 
 /*
   The following configuration is dedicated to the DISCO L475VG IoT board.
@@ -35,7 +37,7 @@ WiFiClass WiFi(&SPI_3, PE0, PE1, PE8, PB13);
 
 void setup() {
   // Initialize serial communication and wait for serial port to connect:
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial) {
     ;
   }
